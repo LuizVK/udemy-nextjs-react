@@ -1,0 +1,36 @@
+.megasena {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.megasena h1 {
+    margin-bottom: 20px;
+}
+
+.megasena label {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.megasena button {
+    padding: 5px 10px;
+    background-color: dodgerblue;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 2px;
+}
+
+.megasena input {
+    margin: 0 10px 0 10px;
+    padding: 5px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
