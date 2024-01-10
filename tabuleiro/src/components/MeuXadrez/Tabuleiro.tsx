@@ -21,7 +21,7 @@ const gerarTabuleiro = (quantidadeCasas: number = 8) => {
         
 
         for (let y = 0; y < quantidadeCasas; y++) {
-            lista.push(<CasaTabuleiro cor={pretoOuBranco(i, y)} tamanhoCasa={configTabuleiro.tamanhoTabuleiro / configTabuleiro.quantidadeCasas} />)
+            lista.push(<CasaTabuleiro key={`${i}${y}`} cor={pretoOuBranco(i, y)} tamanhoCasa={configTabuleiro.tamanhoTabuleiro / configTabuleiro.quantidadeCasas} />)
         }
     }
 
