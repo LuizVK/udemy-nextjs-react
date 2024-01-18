@@ -3,7 +3,8 @@ import QuestaoModel from '../model/questao'
 import Questionario from '../components/Questionario'
 import { useRouter } from 'next/router'
 
-const BASE_URL = 'https://udemy-nextjs-react.vercel.app/api'
+// const BASE_URL = 'https://udemy-nextjs-react.vercel.app/api'
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL_API
 
 export default function Home() {
   const [idsDasQuestoes, setIdsDasQuestoes] = useState<number[]>([])
