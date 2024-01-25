@@ -1,5 +1,6 @@
 import useAuth from "@/data/hook/useAuth";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface AvatarUsuarioProps {
     className?: string
@@ -7,6 +8,7 @@ interface AvatarUsuarioProps {
 
 export default function AvatarUsuario(props: AvatarUsuarioProps) {
     const { usuario } = useAuth()
+    const pathname = usePathname()
 
     return (
         <Link href="/perfil">
@@ -16,6 +18,7 @@ export default function AvatarUsuario(props: AvatarUsuarioProps) {
                 className={`
                     h-10 w-10 rounded-full cursor-pointer 
                     ${props.className}
+                    ${pathname === '/perfil' ? `border-2 border-emerald-500 dark:border-purple-500`: ''}
                 `}
             />
         </Link>

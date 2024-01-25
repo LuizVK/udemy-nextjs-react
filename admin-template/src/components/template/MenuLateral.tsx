@@ -2,6 +2,7 @@ import useAuth from "@/data/hook/useAuth";
 import { IconeAjustes, IconeCasa, IconeSair, IconeSino } from "../icons";
 import Logo from "./Logo";
 import MenuItem from "./MenuItem";
+import { usePathname } from "next/navigation";
 
 interface MenuLateralProps {
 
@@ -9,7 +10,8 @@ interface MenuLateralProps {
 
 export default function MenuLateral(props: MenuLateralProps) {
     const { logout } = useAuth()
-
+    const pathname = usePathname()
+    
     return (
         <aside className={`
             flex flex-col
@@ -24,9 +26,9 @@ export default function MenuLateral(props: MenuLateralProps) {
                 <Logo />
             </div>
             <ul className="flex-grow">
-                <MenuItem url="/" texto="Início" icone={IconeCasa} />
-                <MenuItem url="/ajustes" texto="Ajustes" icone={IconeAjustes} />
-                <MenuItem url="/notificacoes" texto="Notificações" icone={IconeSino} />
+                <MenuItem url="/" texto="Início" icone={IconeCasa} ativo={pathname === '/'}/>
+                <MenuItem url="/ajustes" texto="Ajustes" icone={IconeAjustes} ativo={pathname === '/ajustes'}/>
+                <MenuItem url="/notificacoes" texto="Notificações" icone={IconeSino} ativo={pathname === '/notificacoes'} />
             </ul>
             <ul>
                 <MenuItem 
