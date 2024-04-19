@@ -50,5 +50,3 @@ Curso da Udemy para aprender sobre o desenvolvimento de aplicações React com o
 10) next-crud
 
     No projeto next-crud, foi realizado o desenvolvimento de um CRUD de cliente utilizando TailwindCSS, TypeScript e Firebase.
-
-    Disponível em: https://udemy-nextjs-react-g2j7.vercel.app/ 
